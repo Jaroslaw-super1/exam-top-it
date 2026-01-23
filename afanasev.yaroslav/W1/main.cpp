@@ -20,7 +20,7 @@ int main()
   try
   {
     size_t a = 0;
-    size_t n = 0;
+    long long n = 0;
 
     while (true)
     {
@@ -81,6 +81,21 @@ int main()
   }
 
   std::cout << "size: " << size << '\n';
+  std::cout << "median: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "maxln: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "maxseq: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "minln: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "minseq: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "negative: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "positive: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "medianln: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "empty: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "sum-negative: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "sum-positive: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "average: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "sigma: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "dobsov: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "all: " << "<NOT SUPPORT>" << '\n';
 
   delete[] mtx;
 

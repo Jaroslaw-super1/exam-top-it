@@ -5,9 +5,11 @@ int main()
   size_t * mtx = nullptr;
 
   size_t size = 0;
-  size_t summ = 0;
+  long long summ = 0;
   size_t maxln = 0;
   size_t minln = 0;
+  size_t negative = 0;
+  size_t positive = 0;
 
   try
   {
@@ -84,6 +86,15 @@ int main()
         }
 
         summ += n;
+        if (n < 0)
+        {
+          negative++;
+        }
+        else
+        {
+          positive++;
+        }
+        
         
         mtx[size - a + i] = n;
       }
@@ -103,11 +114,11 @@ int main()
   std::cout << "size: " << size << '\n';
   std::cout << "median: " << summ / size << '\n';
   std::cout << "maxln: " << maxln << '\n';
-  std::cout << "maxseq: " << minln << '\n';
-  std::cout << "minln: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "maxseq: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "minln: " << minln << '\n';
   std::cout << "minseq: " << "<NOT SUPPORT>" << '\n';
-  std::cout << "negative: " << "<NOT SUPPORT>" << '\n';
-  std::cout << "positive: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "negative: " << negative << '\n';
+  std::cout << "positive: " << positive << '\n';
   std::cout << "medianln: " << "<NOT SUPPORT>" << '\n';
   std::cout << "empty: " << "<NOT SUPPORT>" << '\n';
   std::cout << "sum-negative: " << "<NOT SUPPORT>" << '\n';

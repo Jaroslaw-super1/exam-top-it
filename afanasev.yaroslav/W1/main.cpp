@@ -7,7 +7,7 @@ int main()
   size_t size = 0;
   size_t summ = 0;
   size_t maxln = 0;
-  
+  size_t minln = 0;
 
   try
   {
@@ -57,6 +57,14 @@ int main()
       mtx = tmp;
 
       maxln = std::max(a, maxln);
+      if (size)
+      {
+        minln = std::min(a, minln);
+      }
+      else
+      {
+        minln = a;
+      }
 
       size += a;
 
@@ -95,7 +103,7 @@ int main()
   std::cout << "size: " << size << '\n';
   std::cout << "median: " << summ / size << '\n';
   std::cout << "maxln: " << maxln << '\n';
-  std::cout << "maxseq: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "maxseq: " << minln << '\n';
   std::cout << "minln: " << "<NOT SUPPORT>" << '\n';
   std::cout << "minseq: " << "<NOT SUPPORT>" << '\n';
   std::cout << "negative: " << "<NOT SUPPORT>" << '\n';

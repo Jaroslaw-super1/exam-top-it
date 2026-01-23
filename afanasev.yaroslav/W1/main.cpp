@@ -7,6 +7,12 @@ int main(int argc, char ** argv)
   {
     return 4;
   }
+  int command = std::atoi(argv[1]);
+
+  if (command < 0 || command > 16)
+  {
+    return 4;
+  }
 
   size_t * mtx = nullptr;
 
@@ -135,29 +141,59 @@ int main(int argc, char ** argv)
     median = summ / size;
   }
 
-  switch (expression)
+  switch (command)
   {
-  case constant expression:
-    /* code */
-    break;
+    case 0:
+      std::cout << "size: " << size << '\n';
+      break;
+    case 1:
+      std::cout << "median: " << median << '\n';
+      break;
+    case 2:
+      std::cout << "maxln: " << maxln << '\n';
+      break;
+    case 3:
+      std::cout << "maxseq: " << "<NOT SUPPORT>" << '\n';
+      break;
+    case 4:
+      std::cout << "minln: " << minln << '\n';
+      break;
+    case 5:
+      std::cout << "minseq: " << "<NOT SUPPORT>" << '\n';
+      break;
+    case 6:
+      std::cout << "negative: -" << negative << '\n';
+      break;
+    case 7:
+      std::cout << "positive: " << positive << '\n';
+      break;
+    case 8:
+      std::cout << "medianln: " << "<NOT SUPPORT>" << '\n';
+      break;
+    case 9:
+      std::cout << "empty: " << empty << '\n';
+      break;
+    case 10:
+      std::cout << "sum-negative: " << sum_negative << '\n';
+      break;
+    case 11:
+      std::cout << "sum-positive: " << sum_positive << '\n';
+      break;
+    case 12:
+      std::cout << "average: " << "<NOT SUPPORT>" << '\n';
+      break;
+    case 13:
+      std::cout << "sigma: " << "<NOT SUPPORT>" << '\n';
+      break;
+    case 14:
+      std::cout << "dobsov: " << "<NOT SUPPORT>" << '\n';
+      break;
+    case 15:
+      std::cout << "all: " << "<NOT SUPPORT>" << '\n';
+      break;
   }
 
-  std::cout << "size: " << size << '\n';
-  std::cout << "median: " << median << '\n';
-  std::cout << "maxln: " << maxln << '\n';
-  std::cout << "maxseq: " << "<NOT SUPPORT>" << '\n';
-  std::cout << "minln: " << minln << '\n';
-  std::cout << "minseq: " << "<NOT SUPPORT>" << '\n';
-  std::cout << "negative: -" << negative << '\n';
-  std::cout << "positive: " << positive << '\n';
-  std::cout << "medianln: " << "<NOT SUPPORT>" << '\n';
-  std::cout << "empty: " << empty << '\n';
-  std::cout << "sum-negative: " << sum_negative << '\n';
-  std::cout << "sum-positive: " << sum_positive << '\n';
-  std::cout << "average: " << "<NOT SUPPORT>" << '\n';
-  std::cout << "sigma: " << "<NOT SUPPORT>" << '\n';
-  std::cout << "dobsov: " << "<NOT SUPPORT>" << '\n';
-  std::cout << "all: " << "<NOT SUPPORT>" << '\n';
+  
 
   return 0;
 }

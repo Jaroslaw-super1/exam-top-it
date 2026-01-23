@@ -7,15 +7,15 @@ int main()
   size_t size = 0;
   size_t summ = 0;
 
+
   try
   {
-    mtx = new size_t[1];
+    mtx = new size_t[size];
   }
   catch (...)
   {
     return 1;
   }
-
 
   try
   {
@@ -36,6 +36,24 @@ int main()
         return 2;
       }
 
+      size_t * tmp = nullptr;
+
+      try
+      {
+        tmp = new size_t[size + a];
+      }
+      catch(...)
+      {
+        delete[] mtx;
+        return 1;
+      }
+
+      for (size_t i = 0; i < size; i++)
+      {
+        tmp[i] = mtx[i];
+      }
+      delete[] mtx;
+      mtx = tmp;
       size += a;
 
       for (size_t i = 0; i < a; i++)
@@ -53,12 +71,8 @@ int main()
           return 2;
         }
 
-        
+        mtx[size - a + i] = n;
       }
-      
-
-
-      std::cout << a << '\n';
     }
   }
   catch(...)

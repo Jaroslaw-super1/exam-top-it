@@ -104,8 +104,7 @@ int main()
           positive++;
           sum_positive += n;
         }
-        
-        
+
         mtx[size - a + i] = n;
       }
     }
@@ -129,7 +128,6 @@ int main()
   {
     median = summ / size;
   }
-  
 
   std::cout << "size: " << size << '\n';
   std::cout << "median: " << median << '\n';
@@ -147,8 +145,6 @@ int main()
   std::cout << "sigma: " << "<NOT SUPPORT>" << '\n';
   std::cout << "dobsov: " << "<NOT SUPPORT>" << '\n';
   std::cout << "all: " << "<NOT SUPPORT>" << '\n';
-
-
 
   return 0;
 }

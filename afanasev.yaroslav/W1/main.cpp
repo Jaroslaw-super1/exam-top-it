@@ -10,6 +10,7 @@ int main()
   size_t minln = 0;
   size_t negative = 0;
   size_t positive = 0;
+  size_t empty = 0;
 
   try
   {
@@ -67,6 +68,11 @@ int main()
       {
         minln = a;
       }
+      if (!a)
+      {
+        empty++;
+      }
+
 
       size += a;
 
@@ -120,7 +126,7 @@ int main()
   std::cout << "negative: " << negative << '\n';
   std::cout << "positive: " << positive << '\n';
   std::cout << "medianln: " << "<NOT SUPPORT>" << '\n';
-  std::cout << "empty: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "empty: " << empty << '\n';
   std::cout << "sum-negative: " << "<NOT SUPPORT>" << '\n';
   std::cout << "sum-positive: " << "<NOT SUPPORT>" << '\n';
   std::cout << "average: " << "<NOT SUPPORT>" << '\n';

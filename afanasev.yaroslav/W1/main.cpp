@@ -1,7 +1,13 @@
 #include <iostream>
+#include <cstring>
 
 int main(int argc, char ** argv)
 {
+  if (argc != 2)
+  {
+    return 4;
+  }
+
   size_t * mtx = nullptr;
 
   size_t size = 0;
@@ -127,6 +133,13 @@ int main(int argc, char ** argv)
   else
   {
     median = summ / size;
+  }
+
+  switch (expression)
+  {
+  case constant expression:
+    /* code */
+    break;
   }
 
   std::cout << "size: " << size << '\n';

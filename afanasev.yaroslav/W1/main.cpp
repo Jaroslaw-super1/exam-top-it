@@ -6,7 +6,8 @@ int main()
 
   size_t size = 0;
   size_t summ = 0;
-
+  size_t maxln = 0;
+  
 
   try
   {
@@ -54,6 +55,9 @@ int main()
       }
       delete[] mtx;
       mtx = tmp;
+
+      maxln = std::max(a, maxln);
+
       size += a;
 
       for (size_t i = 0; i < a; i++)
@@ -71,6 +75,8 @@ int main()
           return 2;
         }
 
+        summ += n;
+        
         mtx[size - a + i] = n;
       }
     }
@@ -79,10 +85,16 @@ int main()
   {
     delete[] mtx;
   }
+  delete[] mtx;
+
+  if (!size)
+  {
+    return 3;
+  }
 
   std::cout << "size: " << size << '\n';
-  std::cout << "median: " << "<NOT SUPPORT>" << '\n';
-  std::cout << "maxln: " << "<NOT SUPPORT>" << '\n';
+  std::cout << "median: " << summ / size << '\n';
+  std::cout << "maxln: " << maxln << '\n';
   std::cout << "maxseq: " << "<NOT SUPPORT>" << '\n';
   std::cout << "minln: " << "<NOT SUPPORT>" << '\n';
   std::cout << "minseq: " << "<NOT SUPPORT>" << '\n';
@@ -97,7 +109,7 @@ int main()
   std::cout << "dobsov: " << "<NOT SUPPORT>" << '\n';
   std::cout << "all: " << "<NOT SUPPORT>" << '\n';
 
-  delete[] mtx;
+
 
   return 0;
 }
